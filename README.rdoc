@@ -1,0 +1,4 @@
+== Sword
+Sword is a flexible Content Management System for any purpose. 
+
+== Installation
