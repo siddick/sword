@@ -1,0 +1,7 @@
+Description:
+    Generate a Component  
+
+Example:
+    rails generate sword:component blog:page title:string content:text
+
+    This will create:

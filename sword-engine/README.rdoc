@@ -1,0 +1,68 @@
+== Sword
+	Swrod is flexible content management system( CMS ). The sword package will have the link to sword-engine and sword-blog. 
+	The sword-engine contain the core modules to handle all the base needs of the CMS. It handle the component, menu, gadget, theme, user and site.
+	
+=== SwordEngine
+   1. Component 
+   	We can simply say controller is a component. The Component behave more then controller, It behave differently based on role. 
+	It have set of operations( simply it a action ).
+	Each operation can make to a Role. 
+	Role based service.
+   2. Menu
+   	Have a hiracy structure.  
+   3. Gadget
+	You aware of gadget. 
+   4. Theme
+   	Theme 
+   5. User
+   	Users
+   6. Site
+   	
+
+	Extra : Content, ContentType, Page
+
+=== SwordBlog
+   1. Blog
+   2. Post
+   3. Comment
+   4. Poll
+	
+Component :-
+	Component -> name, type, controller, menu_view, options, description
+	Operation -> Component, action, user_specify, description
+	Operation_role_map -> Operation, Role
+
+	Partial_view -> controller, action, view, Component
+
+Menu :-
+	Menu 	-> name, Parent_menu, url, options, Operation, description
+
+Gadget :-
+	Gadget			-> name, view, Component
+	Gadget_position_map 	-> Gadget, Position, options
+	Position_role_map	-> Position, Role
+
+Theme :-
+	Theme 	-> name, description, default_option
+
+
+Site :-
+	Site	-> name, host, description, Default_theme options
+	Site_theme_map 	   -> Site, Theme, options
+	Site_component_map -> Site, Component
+	Site_menu_map	   -> Site, Menu
+	Site_gadget_position_map -> Site, Gadget_position
+
+User :-
+	User -> username, password, fullname, enable, options
+	User_role_map	-> User, Role
+
+
+Content :-
+	Content -> type, data, version, top_content
+
+Page :-
+	Page 	-> header, Content
+	Page_role_map	-> Page, Role
+	Site_page_map	-> Site, Page
+	

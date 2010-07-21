@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  operation_id: 1
+  role_id: 1
+
+two:
+  operation_id: 1
+  role_id: 1

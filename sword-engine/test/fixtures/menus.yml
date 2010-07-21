@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  parent_menu_id: 1
+  url: MyString
+  options: MyText
+  operation_id: 1
+  description: MyString
+
+two:
+  name: MyString
+  parent_menu_id: 1
+  url: MyString
+  options: MyText
+  operation_id: 1
+  description: MyString

@@ -1,0 +1,12 @@
+
+source 'http://rubygems.org'
+
+
+# Rails 3
+gem 'rails', '3.0.0.beta4'
+
+# Database
+gem 'sqlite3-ruby', :require => 'sqlite3'
+
+# Paginator
+gem 'will_paginate', '3.0.pre'

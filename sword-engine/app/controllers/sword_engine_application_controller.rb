@@ -1,0 +1,2 @@
+class SwordEngineApplicationController < ApplicationController
+end

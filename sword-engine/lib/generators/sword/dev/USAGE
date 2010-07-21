@@ -1,0 +1,11 @@
+Description:
+    Explain the generator
+
+Example:
+	rails g sword:dev sword-blog 0.0.1
+
+    This will create:
+    	sword-blog.gemspec
+    	lib/sword/
+    	lib/sword-blog.rb
+	app/controllers/sword_blog_application_controller.rb

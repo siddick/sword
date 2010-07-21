@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  component_id: 1
+  action: MyString
+  description: MyString
+
+two:
+  component_id: 1
+  action: MyString
+  description: MyString

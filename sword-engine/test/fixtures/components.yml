@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  context: MyString
+  description: MyString
+  controller: MyString
+  menu_view: MyString
+  options: MyText
+
+two:
+  name: MyString
+  context: MyString
+  description: MyString
+  controller: MyString
+  menu_view: MyString
+  options: MyText
