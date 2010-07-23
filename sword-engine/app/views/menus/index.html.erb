@@ -1,0 +1,42 @@
+<h1>Listing menus</h1>
+
+<table class='listview' >
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>Parent menu</th>
+        <th>Url</th>
+        <th>Options</th>
+        <th>Operation</th>
+        <th>Description</th>
+        <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+<% @menus.each do |menu| %>
+  <tr>
+    <td><%= menu.name %></td>
+    <td><%= menu.parent_menu_id %></td>
+    <td><%= menu.url %></td>
+    <td><%= menu.options %></td>
+    <td><%= menu.operation_id %></td>
+    <td><%= menu.description %></td>
+    <td><%= link_to 'Show', menu %></td>
+    <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
+    <td><%= link_to 'Destroy', menu, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+  </tbody>
+  <tfoot>
+    <tr><td colspan=6 > <%= will_paginate @menus %> </td></tr>
+  </tfoot>
+
+</table>
+
+<br />
+
+<%= link_to 'New Menu', new_menu_path %>

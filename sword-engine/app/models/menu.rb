@@ -4,7 +4,7 @@ class Menu < ActiveRecord::Base
   validates_uniqueness_of :name, :scope => [ :parent_menu_id ]
   
   belongs_to :parent_menu, :class_name => "Menu"
-  has_many   :childs, :class_name => "Menu", :foreign_key => :parent_menu_id
+  has_many   :child_menus, :class_name => "Menu", :foreign_key => :parent_menu_id
 
   serialize :options 
 
@@ -21,4 +21,5 @@ class Menu < ActiveRecord::Base
     }
     return menu
   end
+
 end

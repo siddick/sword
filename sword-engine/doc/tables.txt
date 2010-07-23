@@ -5,13 +5,19 @@ rails g model operation_role_map operation_id:integer role_id:integer
 rails g model menu name:string parent_menu_id:integer url:string options:text operation_id:integer description:string  
 
 
+rails g sword:component_controller role name:string description:string frozen_role:boolean
+rails g sword:component_controller component name:string context:string description:string controller:string menu_view:string options:text
+rails g sword:component_controller menu name:string parent_menu_id:integer url:string options:text operation_id:integer description:string
+
+rails g sword:component_controller operation component_id:integer action:string description:string
+
 
 
 Roles :-
 	rails g component role name:string description:string frozen_role:boolean
 
 Component :-	
-	rails g component component name:string type:string description:string controller:string menu_view:string options:text 
+#	rails g component component name:string type:string description:string controller:string menu_view:string options:text 
 	rails g component operation component_id:integer action:string description:string
 
 Menu :-

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @component.name %>
+</p>
+
+<p>
+  <b>Context:</b>
+  <%= @component.context %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @component.description %>
+</p>
+
+<p>
+  <b>Controller:</b>
+  <%= @component.controller %>
+</p>
+
+<p>
+  <b>Menu view:</b>
+  <%= @component.menu_view %>
+</p>
+
+<p>
+  <b>Options:</b>
+  <%= @component.options %>
+</p>
+
+
+<%= link_to 'Edit', edit_component_path(@component) %> |
+<%= link_to 'Back', components_path %>

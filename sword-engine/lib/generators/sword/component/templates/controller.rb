@@ -1,6 +1,5 @@
 class <%= controller_class_name %>Controller < ApplicationController
 <% unless options[:singleton] -%>
-  # Siddick Module
   # GET <%= route_url %>
   # GET <%= route_url %>.xml
   def index

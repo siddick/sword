@@ -1,0 +1,36 @@
+<h1>Listing operations</h1>
+
+<table class='listview' >
+  <thead>
+    <tr>
+        <th>Component</th>
+        <th>Action</th>
+        <th>Description</th>
+        <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+<% @operations.each do |operation| %>
+  <tr>
+    <td><%= operation.component_id %></td>
+    <td><%= operation.action %></td>
+    <td><%= operation.description %></td>
+    <td><%= link_to 'Show', operation %></td>
+    <td><%= link_to 'Edit', edit_operation_path(operation) %></td>
+    <td><%= link_to 'Destroy', operation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+  </tbody>
+  <tfoot>
+    <tr><td colspan=3 > <%= will_paginate @operations %> </td></tr>
+  </tfoot>
+
+</table>
+
+<br />
+
+<%= link_to 'New Operation', new_operation_path %>

@@ -6,4 +6,12 @@ class Operation < ActiveRecord::Base
   has_many :roles, :class_name => "OperationRoleMap", :foreign_key => "operation_id", 
    :dependent => :destroy
 
+  def self.get_operation( controller, action )
+    component = Component.find_by_controller( controller )
+    if( component )
+      Operation.where( :component_id => component.id, :action => action ).first
+    else
+      nil
+    end
+  end
 end

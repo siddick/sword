@@ -14,7 +14,7 @@ class <%= migration_class_name %> < ActiveRecord::Migration
                       :controller => "<%= table_name %>",
                       :menu_view => "menu", 
                       :options  => {} )
-    component.create_actions( :index, :view, :edit, :create, :delete )                      
+    component.create_actions( :index, :show, :edit, :create, :delete )                      
     component.create_menu( [ "administer", "site_configuration" ,"<%= table_name %>" ], "description for <%= table_name %>", "index" )
 
   end

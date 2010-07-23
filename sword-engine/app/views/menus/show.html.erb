@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @menu.name %>
+</p>
+
+<p>
+  <b>Parent menu:</b>
+  <%= @menu.parent_menu_id %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @menu.url %>
+</p>
+
+<p>
+  <b>Options:</b>
+  <%= @menu.options %>
+</p>
+
+<p>
+  <b>Operation:</b>
+  <%= @menu.operation_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @menu.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_menu_path(@menu) %> |
+<%= link_to 'Back', menus_path %>
