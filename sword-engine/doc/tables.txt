@@ -24,30 +24,36 @@ Menu :-
 	rails g component menu name:string parent_menu_id:integer url:string options:text operation_id:integer description:string  
 
 Gadget :-
-	rails g component position name:string description:string frozen_position:boolean
-	rails g model position_role_map position_id:integer role_id:integer
+	rails g sword:component position name:string parent_position_id:integer description:string options:text frozen_position:boolean sort_value:integer 
+	rails g sword:component_model position_role_map position_id:integer role_id:integer
 
-	rails g component gadget name:string view:string component_id:integer
-	rails g component gadget_position_map gadget_id:integer position_id:integer options:text
+	rails g sword:component gadget name:string controller:string view:string
+	rails g sword:component_model gadget_position_map gadget_id:integer position_id:integer options:text sort_value:integer
 
 Theme :-
+	
 	rails g component theme name:string description:string options:text 
+	rails g sword:component_model theme_position_map theme_id:integer position_id:integer
 	
 
 User :-
-	rails g component user username:string password:string fullname:string enable:boolean options:text 
+	rails g sword:component user username:string md5_password:string fullname:string enable:boolean options:text 
 	rails g model user_role_map user_id:integer role_id:integer 
 
 Site :-	
-	rails g component site name:string host:string description:string default_theme_id:integer options:text 
-	rails g model site_theme_map site_id:integer theme_id:integer 
-	rails g model site_role_map site_id:integer role_id:integer
-	rails g model site_gadget_position_map site_id:integer gadget_position_map_id:integer 
+	rails g sword:component site name:string host:string description:string theme_id:integer theme_options:text options:text 
+	rails g sword:component_model site_role_map site_id:integer role_id:integer
+	rails g sword:component_model site_component_map site_id:integer component_id:integer
+	rails g sword:component_model site_gadget_position_map site_id:integer gadget_position_map_id:integer 
 
 
 
 Content :-
-	rails g model content type:string data:text version:string top_content:integer
-	rails g component page header:string content_id:integer
-	rails g model page_role_map page_id:integer role_id:integer 
-	rails g model site_page_map site_id:integer page_id:integer 
+	rails g sword:component_model content type:string data:text version:string latest_content_id:integer
+	rails g sword:component_model content_type name:string
+	rails g sword:component page header:string content_id:integer
+	rails g sword:component_model page_role_map page_id:integer role_id:integer 
+
+	rails g sword:component_model site_page_map site_id:integer page_id:integer
+
+	

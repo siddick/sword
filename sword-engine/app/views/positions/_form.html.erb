@@ -1,0 +1,41 @@
+<%= form_for(@position) do |f| %>
+  <% if @position.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@position.errors.count, "error") %> prohibited this position from being saved:</h2>
+
+      <ul>
+      <% @position.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_position_id %><br />
+    <%= f.text_field :parent_position_id %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :options %><br />
+    <%= f.text_area :options %>
+  </div>
+  <div class="field">
+    <%= f.label :frozen_position %><br />
+    <%= f.check_box :frozen_position %>
+  </div>
+  <div class="field">
+    <%= f.label :sort_value %><br />
+    <%= f.text_field :sort_value %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

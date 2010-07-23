@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  parent_position_id: 1
+  description: MyString
+  options: MyText
+  frozen_position: false
+  sort_value: 1
+
+two:
+  name: MyString
+  parent_position_id: 1
+  description: MyString
+  options: MyText
+  frozen_position: false
+  sort_value: 1

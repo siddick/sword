@@ -1,0 +1,36 @@
+<h1>Listing gadgets</h1>
+
+<table class='listview' >
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>Controller</th>
+        <th>View</th>
+        <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+<% @gadgets.each do |gadget| %>
+  <tr>
+    <td><%= gadget.name %></td>
+    <td><%= gadget.controller %></td>
+    <td><%= gadget.view %></td>
+    <td><%= link_to 'Show', gadget %></td>
+    <td><%= link_to 'Edit', edit_gadget_path(gadget) %></td>
+    <td><%= link_to 'Destroy', gadget, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+  </tbody>
+  <tfoot>
+    <tr><td colspan=3 > <%= will_paginate @gadgets %> </td></tr>
+  </tfoot>
+
+</table>
+
+<br />
+
+<%= link_to 'New Gadget', new_gadget_path %>

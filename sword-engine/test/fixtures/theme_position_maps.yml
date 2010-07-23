@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  theme_id: 1
+  position_id: 1
+
+two:
+  theme_id: 1
+  position_id: 1

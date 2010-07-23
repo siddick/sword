@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  username: MyString
+  md5_password: MyString
+  fullname: MyString
+  enable: false
+  options: MyText
+
+two:
+  username: MyString
+  md5_password: MyString
+  fullname: MyString
+  enable: false
+  options: MyText

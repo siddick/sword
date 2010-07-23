@@ -1,0 +1,29 @@
+<%= form_for(@gadget) do |f| %>
+  <% if @gadget.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gadget.errors.count, "error") %> prohibited this gadget from being saved:</h2>
+
+      <ul>
+      <% @gadget.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :controller %><br />
+    <%= f.text_field :controller %>
+  </div>
+  <div class="field">
+    <%= f.label :view %><br />
+    <%= f.text_field :view %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

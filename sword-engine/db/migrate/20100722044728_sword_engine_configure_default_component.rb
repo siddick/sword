@@ -25,13 +25,13 @@ class SwordEngineConfigureDefaultComponent < ActiveRecord::Migration
     Menu.create_menu( [ "administer", "system" ],
                      { :controller => "menus", :action => "administer", :menu => "system" },
                      oper.id, "Adminsiter" )
-    Menu.create_menu( [ "administer", "system", "role" ],
+    Menu.create_menu( [ "administer", "system", "roles" ],
                      { :controller => "roles", :action => "index" },
                      Operation.get_operation( "roles", "index" ), "Role Management" )
-    Menu.create_menu( [ "administer", "system", "component" ],
+    Menu.create_menu( [ "administer", "system", "components" ],
                      { :controller => "components", :action => "index" },
                      Operation.get_operation( "components", "index" ), "Component Management" )
-    Menu.create_menu( [ "administer", "system", "menu" ],
+    Menu.create_menu( [ "administer", "system", "menus" ],
                      { :controller => "menus", :action => "index" }, 
                      Operation.get_operation( "menus", "index" ), "Menu Management" )
 

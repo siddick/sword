@@ -1,0 +1,42 @@
+<h1>Listing positions</h1>
+
+<table class='listview' >
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>Parent position</th>
+        <th>Description</th>
+        <th>Options</th>
+        <th>Frozen position</th>
+        <th>Sort value</th>
+        <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+<% @positions.each do |position| %>
+  <tr>
+    <td><%= position.name %></td>
+    <td><%= position.parent_position_id %></td>
+    <td><%= position.description %></td>
+    <td><%= position.options %></td>
+    <td><%= position.frozen_position %></td>
+    <td><%= position.sort_value %></td>
+    <td><%= link_to 'Show', position %></td>
+    <td><%= link_to 'Edit', edit_position_path(position) %></td>
+    <td><%= link_to 'Destroy', position, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+  </tbody>
+  <tfoot>
+    <tr><td colspan=6 > <%= will_paginate @positions %> </td></tr>
+  </tfoot>
+
+</table>
+
+<br />
+
+<%= link_to 'New Position', new_position_path %>

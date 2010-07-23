@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @site.name %>
+</p>
+
+<p>
+  <b>Host:</b>
+  <%= @site.host %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @site.description %>
+</p>
+
+<p>
+  <b>Theme:</b>
+  <%= @site.theme_id %>
+</p>
+
+<p>
+  <b>Theme options:</b>
+  <%= @site.theme_options %>
+</p>
+
+<p>
+  <b>Options:</b>
+  <%= @site.options %>
+</p>
+
+
+<%= link_to 'Edit', edit_site_path(@site) %> |
+<%= link_to 'Back', sites_path %>

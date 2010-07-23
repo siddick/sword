@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @position.name %>
+</p>
+
+<p>
+  <b>Parent position:</b>
+  <%= @position.parent_position_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @position.description %>
+</p>
+
+<p>
+  <b>Options:</b>
+  <%= @position.options %>
+</p>
+
+<p>
+  <b>Frozen position:</b>
+  <%= @position.frozen_position %>
+</p>
+
+<p>
+  <b>Sort value:</b>
+  <%= @position.sort_value %>
+</p>
+
+
+<%= link_to 'Edit', edit_position_path(@position) %> |
+<%= link_to 'Back', positions_path %>

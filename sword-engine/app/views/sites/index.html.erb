@@ -1,0 +1,42 @@
+<h1>Listing sites</h1>
+
+<table class='listview' >
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>Host</th>
+        <th>Description</th>
+        <th>Theme</th>
+        <th>Theme options</th>
+        <th>Options</th>
+        <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+<% @sites.each do |site| %>
+  <tr>
+    <td><%= site.name %></td>
+    <td><%= site.host %></td>
+    <td><%= site.description %></td>
+    <td><%= site.theme_id %></td>
+    <td><%= site.theme_options %></td>
+    <td><%= site.options %></td>
+    <td><%= link_to 'Show', site %></td>
+    <td><%= link_to 'Edit', edit_site_path(site) %></td>
+    <td><%= link_to 'Destroy', site, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+  </tbody>
+  <tfoot>
+    <tr><td colspan=6 > <%= will_paginate @sites %> </td></tr>
+  </tfoot>
+
+</table>
+
+<br />
+
+<%= link_to 'New Site', new_site_path %>

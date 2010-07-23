@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  host: MyString
+  description: MyString
+  theme_id: 1
+  theme_options: MyText
+  options: MyText
+
+two:
+  name: MyString
+  host: MyString
+  description: MyString
+  theme_id: 1
+  theme_options: MyText
+  options: MyText

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @user.username %>
+</p>
+
+<p>
+  <b>Md5 password:</b>
+  <%= @user.md5_password %>
+</p>
+
+<p>
+  <b>Fullname:</b>
+  <%= @user.fullname %>
+</p>
+
+<p>
+  <b>Enable:</b>
+  <%= @user.enable %>
+</p>
+
+<p>
+  <b>Options:</b>
+  <%= @user.options %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

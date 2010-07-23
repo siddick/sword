@@ -6,6 +6,7 @@ class SwordEngineCreateMenus < ActiveRecord::Migration
       t.string :url
       t.text :options
       t.integer :operation_id
+      t.integer :sort_value
       t.string :description
 
       t.timestamps

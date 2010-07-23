@@ -1,0 +1,36 @@
+<h1>Listing themes</h1>
+
+<table class='listview' >
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Options</th>
+        <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+<% @themes.each do |theme| %>
+  <tr>
+    <td><%= theme.name %></td>
+    <td><%= theme.description %></td>
+    <td><%= theme.options %></td>
+    <td><%= link_to 'Show', theme %></td>
+    <td><%= link_to 'Edit', edit_theme_path(theme) %></td>
+    <td><%= link_to 'Destroy', theme, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+  </tbody>
+  <tfoot>
+    <tr><td colspan=3 > <%= will_paginate @themes %> </td></tr>
+  </tfoot>
+
+</table>
+
+<br />
+
+<%= link_to 'New Theme', new_theme_path %>

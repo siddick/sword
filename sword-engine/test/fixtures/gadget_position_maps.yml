@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  gadget_id: 1
+  position_id: 1
+  options: MyText
+  sort_value: 1
+
+two:
+  gadget_id: 1
+  position_id: 1
+  options: MyText
+  sort_value: 1

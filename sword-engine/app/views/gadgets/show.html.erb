@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @gadget.name %>
+</p>
+
+<p>
+  <b>Controller:</b>
+  <%= @gadget.controller %>
+</p>
+
+<p>
+  <b>View:</b>
+  <%= @gadget.view %>
+</p>
+
+
+<%= link_to 'Edit', edit_gadget_path(@gadget) %> |
+<%= link_to 'Back', gadgets_path %>
