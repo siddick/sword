@@ -37,7 +37,7 @@ Theme :-
 	
 
 User :-
-	rails g sword:component user username:string md5_password:string fullname:string enable:boolean options:text 
+	rails g sword:component user username:string md5_password:string fullname:string email:string enable:boolean options:text 
 	rails g model user_role_map user_id:integer role_id:integer 
 
 Site :-	
@@ -46,6 +46,7 @@ Site :-
 	rails g sword:component_model site_component_map site_id:integer component_id:integer
 	rails g sword:component_model site_gadget_position_map site_id:integer gadget_position_map_id:integer 
 
+	rails g sword:component_model site_template name:string 
 
 
 Content :-

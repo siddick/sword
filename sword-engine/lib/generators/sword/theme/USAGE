@@ -1,0 +1,14 @@
+Description:
+    Explain the generator
+
+Example:
+    rails generate sword:theme realtheme
+
+    This will create:
+        public/theme/realtheme/js/
+        public/theme/realtheme/css/
+	app/view/layouts/realtheme/login.html.erb
+	app/view/layouts/realtheme/home.html.erb
+	app/view/layouts/realtheme/default.html.erb
+	app/view/layouts/realtheme/print.html.erb
+	

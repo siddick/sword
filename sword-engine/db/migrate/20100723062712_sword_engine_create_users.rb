@@ -4,6 +4,7 @@ class SwordEngineCreateUsers < ActiveRecord::Migration
       t.string :username
       t.string :md5_password
       t.string :fullname
+      t.string :email
       t.boolean :enable
       t.text :options
 

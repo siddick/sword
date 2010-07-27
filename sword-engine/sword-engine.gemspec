@@ -13,9 +13,10 @@ Gem::Specification.new do |s|
   s.homepage          = 'http://sword.siddick.com'
 
 
-  package_files = Dir['CHANGELOG', 'README', 'bin/**/*', 'lib/**/*', 'app/**/*', 'config/routes.rb' ]
+  package_files = Dir['CHANGELOG', 'README', 'public/theme/**/*', 'db/migrate/*sword_engine*', 'bin/**/*', 'lib/**/*', 'app/**/*', 'config/routes.rb' ]
   package_files.delete( 'app/controllers/application_controller.rb' )
   package_files.delete( 'app/helpers/application_helper.rb' )
+  package_files.delete( 'app/views/layouts/application.html.erb' )
 
   s.files              = package_files
   s.require_path       = 'lib'
