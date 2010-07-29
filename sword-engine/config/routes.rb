@@ -7,11 +7,8 @@ Rails::Application.routes.draw do |map|
 
   resources :positions
 
-
-  
   resources :users
   resources :themes
-
 
   resources :roles
   resources :components

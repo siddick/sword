@@ -3,10 +3,10 @@ source 'http://rubygems.org'
 
 
 # Rails 3
-gem 'rails', '3.0.0.beta4'
+gem 'rails', '3.0.0.rc'
 
 # Database
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Paginator
-gem 'will_paginate', '3.0.pre'
+gem 'will_paginate', '3.0.pre2'

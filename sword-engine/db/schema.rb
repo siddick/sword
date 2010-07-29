@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100723120625) do
+ActiveRecord::Schema.define(:version => 20100729113854) do
 
   create_table "components", :force => true do |t|
     t.string   "name"
@@ -152,6 +152,12 @@ ActiveRecord::Schema.define(:version => 20100723120625) do
     t.datetime "updated_at"
   end
 
+  create_table "site_templates", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "sites", :force => true do |t|
     t.string   "name"
     t.string   "host"
@@ -189,6 +195,7 @@ ActiveRecord::Schema.define(:version => 20100723120625) do
     t.string   "username"
     t.string   "md5_password"
     t.string   "fullname"
+    t.string   "email"
     t.boolean  "enable"
     t.text     "options"
     t.datetime "created_at"

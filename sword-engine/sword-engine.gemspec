@@ -1,9 +1,10 @@
-require 'lib/sword-engine'
+#require 'rails'
+#require 'lib/sword-engine'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'sword-engine'
-  s.version     = SwordEngine::Version
+  s.version     = '1.0.0' # SwordEngine::Version
   s.summary     = 'Sword is a Flexible Content Management System.'
   s.description = 'This Sword will give power to play on warfield.'
   s.required_ruby_version = '>= 1.8.7'
@@ -24,5 +25,7 @@ Gem::Specification.new do |s|
 #  s.rdoc_options << '--exclude' << '.'
 #  s.has_rdoc = false
 
-  s.add_dependency('rails',          ">= #{Rails::VERSION::STRING} ")
+  s.add_dependency('rails',         ">= 3.0.0.rc" ) ##{Rails::VERSION::STRING} ")
+  s.add_dependency('will_paginate', ">= 3.0.pre2" )
+                   
 end

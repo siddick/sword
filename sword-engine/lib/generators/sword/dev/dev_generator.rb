@@ -5,6 +5,7 @@ class Sword::Generators::DevGenerator < Rails::Generators::Base
   argument :package_version, :type => :string, :default => '1.0.0'
 
   def generate_dev_environment
+    template "tasks.rb", "lib/tasks/sword.rake"
     template "gemspec", "#{package_name}.gemspec"
     template "package.rb", "lib/#{package_name}.rb"
     template "application_controller.rb",
