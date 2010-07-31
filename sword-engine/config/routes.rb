@@ -15,5 +15,6 @@ Rails::Application.routes.draw do |map|
   resources :menus
   resources :operations
 
+  root :to => "pages#index", :layout => "home"
 
 end

@@ -1,3 +1,5 @@
+require 'sword/hash'
+
 module Sword
   module Component
     module Helper
@@ -12,18 +14,35 @@ module Sword
         caches_action :edit, :cache_path => proc_object
       end
 
-      private
       def expire_component
       end
 
+      private
+
+      def component_init
+        @current_site = current_site
+        @current_user = current_user
+        @current_component = current_component
+      end
+
+      def component_layout
+        layout_name = params[:layout] || "default"
+        theme_name  = current_site.theme.name 
+        return "themes/#{theme_name}/#{layout_name}"
+      end
+
       def current_site
-        # For Testing
-        @site ||= Struct.new( :name, :host, :options ).new( "default", "*", { :site_name => "SIDDICK.COM" } )
+        session[:site] ||= 
+          Site.find_by_host('*') || Site.find_by_host( request[:host] ) || Site.first
       end
 
       def current_user
-        # For Testing
-        @user ||= Struct.new( :username, :roles, :options  ).new( "guest", [ "guest" ], {} )
+        session[:user] ||=
+          User.find_by_username( 'guest' )
+      end
+
+      def current_component
+        ::Component.find_by_controller( params[:controller] )
       end
 
     end

@@ -2,7 +2,7 @@ class SitesController < SwordEngineApplicationController
   # GET /sites
   # GET /sites.xml
   def index
-    @sites = Site.paginate :page => params[:page], :order => 'created_at DESC'
+    @sites = Site.paginate :page => params[:page], :include => :theme,  :order => 'created_at DESC'
     
 
     respond_to do |format|

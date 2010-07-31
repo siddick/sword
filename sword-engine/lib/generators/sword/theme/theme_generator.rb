@@ -17,19 +17,19 @@ module Sword
 
       def create_js
         [ 'default' ].each{|js_name|
-            template "js/#{js_name}.js", "public/theme/#{name}/js/#{js_name}.js"
+            template "js/#{js_name}.js", "public/themes/#{name}/js/#{js_name}.js"
         }
       end
 
       def create_css
         [ 'default' ].each{|css_name|
-            template "css/#{css_name}.css", "public/theme/#{name}/css/#{css_name}.css"
+            template "css/#{css_name}.css", "public/themes/#{name}/css/#{css_name}.css"
         }
       end
 
       def create_layout
           [ 'default', 'home', 'login', 'print' ].each{|layout_name|
-            template "layout/#{layout_name}.html.erb", "app/views/layout/#{name}/#{layout_name}.html.erb"
+            template "layout/#{layout_name}.html.erb", "app/views/layouts/themes/#{name}/#{layout_name}.html.erb"
           }
       end
     end

@@ -5,10 +5,8 @@
     <tr>
         <th>Name</th>
         <th>Host</th>
-        <th>Description</th>
         <th>Theme</th>
-        <th>Theme options</th>
-        <th>Options</th>
+        <th>Description</th>
         <th></th>
       <th></th>
       <th></th>
@@ -20,10 +18,8 @@
   <tr>
     <td><%= site.name %></td>
     <td><%= site.host %></td>
+    <td><%= site.theme.name %></td>
     <td><%= site.description %></td>
-    <td><%= site.theme_id %></td>
-    <td><%= site.theme_options %></td>
-    <td><%= site.options %></td>
     <td><%= link_to 'Show', site %></td>
     <td><%= link_to 'Edit', edit_site_path(site) %></td>
     <td><%= link_to 'Destroy', site, :confirm => 'Are you sure?', :method => :delete %></td>
